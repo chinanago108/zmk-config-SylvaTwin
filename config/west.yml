@@ -16,12 +16,27 @@ manifest:
       url-base: https://github.com/sekigon-gonnoc
     - name: efogdev
       url-base: https://github.com/efogdev
+    - name: cormoran
+      url-base: https://github.com/cormoran
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: cormoran
+      revision: v0.3-branch+dya
       import: app/west.yml
+    - name: zmk-module-ble-management
+      remote: cormoran
+      revision: main
+    - name: zmk-module-battery-history
+      remote: cormoran
+      revision: main
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: main
+    - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: main
     - name: zmk-dongle-display
       remote: te9no
       revision: main
