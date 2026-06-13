@@ -35,3 +35,12 @@ include:
     shield: SylvaTwin_R
     cmake-args: -DCONFIG_ZMK_SETTINGS_RESET_ON_START=y
     artifact-name: RESET_SylvaTwin_R
+
+  - board: seeeduino_xiao_ble
+    shield: SylvaTwin_L dongle_display
+    cmake-args: -DCONFIG_ZMK_BLE_CLEAR_BONDS_ON_START=y
+    artifact-name: CLEARBONDS_SylvaTwin_L
+  - board: seeeduino_xiao_ble
+    shield: SylvaTwin_R
+    cmake-args: -DCONFIG_ZMK_BLE_CLEAR_BONDS_ON_START=y
+    artifact-name: CLEARBONDS_SylvaTwin_R
